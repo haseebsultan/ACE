@@ -6,7 +6,7 @@ pipeline {
         CI = 'true'
     }
     wrap([$class: 'Xvfb']) {
-    stages {
+   
         stage('Build') {            
   post {
 failure {
@@ -27,4 +27,4 @@ emailext (
     
     }
     }
-}
+
