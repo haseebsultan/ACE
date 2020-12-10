@@ -24,10 +24,10 @@ pipeline {
                      {
                       echo 'path'
                       sh 'pwd'   
-                       wrap([$class: 'Xvfb']) {   
-                    sh './mqsicreatebar -data $WORKSPACE -b $WORKSPACE/GeneratedBarFiles/mytestapp.bar  -a Calculator -compileOnly -v createbartrace.txt -cleanBuild' 
+                      // wrap([$class: 'Xvfb']) {   
+                   // sh './mqsicreatebar -data $WORKSPACE -b $WORKSPACE/GeneratedBarFiles/mytestapp.bar  -a Calculator -compileOnly -v createbartrace.txt -cleanBuild' 
                  
-                     }
+                    // }
                         }
                      }   
  
