@@ -22,9 +22,9 @@ pipeline {
                      dir('/opt/ace-11.0.0.9/tools')
                      {
                          echo 'path'
-                      sh "pwd"   
+                      sh 'pwd'   
                        wrap([$class: 'Xvfb']) {   
-                    sh './mqsicreatebar -data $WORKSPACE -b $WORKSPACE/GeneratedBarFiles/test.bar  -a Calculator -compileOnly -v createbartrace.txt -cleanBuild' 
+                    sh './mqsicreatebar -data $WORKSPACE -b $WORKSPACE/GeneratedBarFiles/mytestapp.bar  -a Calculator -compileOnly -v createbartrace.txt -cleanBuild' 
                  
                      }
                         }
