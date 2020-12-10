@@ -29,7 +29,7 @@ pipeline {
                      }
                         }
                      }   
-    cleanws()
+ 
              }
        stage('copyartifacts')
        {
@@ -42,7 +42,7 @@ pipeline {
            }
        
        }
-   
+   cleanWs()
    }
   }
 
