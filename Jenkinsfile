@@ -7,7 +7,7 @@ pipeline {
    stages{
       // wrap([$class: 'Xvfb']) {
        
-       }
+      
            stage('Build') {            
              post {
                 failure {
@@ -22,7 +22,7 @@ pipeline {
                  steps {
                      dir('/opt/ace-11.0.0.9/tools')
                      {
-                         echo 'path'
+                      echo 'path'
                       sh 'pwd'   
                        wrap([$class: 'Xvfb']) {   
                     sh './mqsicreatebar -data $WORKSPACE -b $WORKSPACE/GeneratedBarFiles/mytestapp.bar  -a Calculator -compileOnly -v createbartrace.txt -cleanBuild' 
@@ -32,21 +32,8 @@ pipeline {
                      }   
  
              }
-       stage('copyartifacts')
-       {
        
-           steps{
-           
-               echo 'copying'
-         // sh 'scp ./$WORKSPACE/GeneratedBarFiles/mytestapp.bar  azureuser@20.51.239.33:/home/azureuser/jenkins/artifacts' 
-                
-           }
        
-       }
-       stage('CleanWorkspace') {
-            steps {
-                cleanWs()
-            }
    }
   }
 
