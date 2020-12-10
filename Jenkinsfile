@@ -24,13 +24,24 @@ pipeline {
                          echo 'path'
                       sh "pwd"   
                        wrap([$class: 'Xvfb']) {   
-                    sh './mqsicreatebar -data $WORKSPACE -b $WORKSPACE/GeneratedBarFiles/mytestapp.bar  -a Calculator -compileOnly -v createbartrace.txt -cleanBuild' 
+                    sh './mqsicreatebar -data $WORKSPACE -b $WORKSPACE/GeneratedBarFiles/${BUILD_NUMBER}.bar  -a Calculator -compileOnly -v createbartrace.txt -cleanBuild' 
                  
                      }
                         }
                      }   
     
              }
-        }
+       stage('copyartifacts')
+       {
+       
+           steps{
+           
+          sh 'scp ./$WORKSPACE/GeneratedBarFiles/mytestapp.bar  azureuser@20.51.239.33:/home/azureuser/jenkins/artifacts' 
+                
+           }
+       
+       }
+   
+   }
   }
 
