@@ -36,7 +36,8 @@ pipeline {
        
            steps{
            
-          sh 'scp ./$WORKSPACE/GeneratedBarFiles/mytestapp.bar  azureuser@20.51.239.33:/home/azureuser/jenkins/artifacts' 
+               echo 'copying'
+         // sh 'scp ./$WORKSPACE/GeneratedBarFiles/mytestapp.bar  azureuser@20.51.239.33:/home/azureuser/jenkins/artifacts' 
                 
            }
        
