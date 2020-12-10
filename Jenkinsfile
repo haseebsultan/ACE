@@ -6,10 +6,7 @@ pipeline {
    
    stages{
       // wrap([$class: 'Xvfb']) {
-       stage('CleanWorkspace') {
-            steps {
-                cleanWs()
-            }
+       
        }
            stage('Build') {            
              post {
@@ -46,7 +43,10 @@ pipeline {
            }
        
        }
-       
+       stage('CleanWorkspace') {
+            steps {
+                cleanWs()
+            }
    }
   }
 
