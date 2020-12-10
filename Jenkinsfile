@@ -19,8 +19,11 @@ pipeline {
                             }
                     }
                  steps {
-                    sh '/opt/ace-11.0.0.9/tools/mqsicreatebar -data $WORKSPACE -b $WORKSPACE/GeneratedBarFiles/mytestapp.bar  -a Calculator -compileOnly -v createbartrace.txt -cleanBuild' 
-
+                     dir('/opt/ace-11.0.0.9/tools/')
+                     {
+                    sh 'mqsicreatebar -data $WORKSPACE -b $WORKSPACE/GeneratedBarFiles/mytestapp.bar  -a Calculator -compileOnly -v createbartrace.txt -cleanBuild' 
+                  sh "pwd"
+                     }
                         }
                      }   
     
