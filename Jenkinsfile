@@ -24,7 +24,7 @@ pipeline {
                          echo 'path'
                       sh "pwd"   
                        wrap([$class: 'Xvfb']) {   
-                    sh './mqsicreatebar -data $WORKSPACE -b $WORKSPACE/GeneratedBarFiles/${BUILD_NUMBER}.bar  -a Calculator -compileOnly -v createbartrace.txt -cleanBuild' 
+                    sh './mqsicreatebar -data $WORKSPACE -b $WORKSPACE/GeneratedBarFiles/test.bar  -a Calculator -compileOnly -v createbartrace.txt -cleanBuild' 
                  
                      }
                         }
