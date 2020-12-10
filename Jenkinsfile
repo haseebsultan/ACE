@@ -1,12 +1,11 @@
 pipeline {
     agent any 
-
-
     environment {
         CI = 'true'
     }
-    wrap([$class: 'Xvfb']) {
    
+        stages{
+       wrap([$class: 'Xvfb']) {
         stage('Build') {            
   post {
 failure {
@@ -27,4 +26,5 @@ emailext (
     
     }
     }
+}
 
