@@ -29,7 +29,7 @@ pipeline {
                      }
                         }
                      }   
-    
+    cleanws()
              }
        stage('copyartifacts')
        {
