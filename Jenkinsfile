@@ -26,8 +26,7 @@ pipeline {
                          sh "pwd"   
                       // wrap([$class: 'Xvfb'])
                      //{   
-                    sh './opt/ace-11.0.0.9/tools/mqsicreatebar -data $WORKSPACE -b $WORKSPACE/GeneratedBarFiles/${BUILD_NUMBER}.bar  -a Calculator -compileOnly -v createbartrace.txt -cleanBuild' 
-                 
+                    sh ''
                      //}
                        // }//end of dir
                      }  //end of step
