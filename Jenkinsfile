@@ -26,7 +26,7 @@ pipeline {
                          sh "pwd"   
                       // wrap([$class: 'Xvfb'])
                      //{   
-                    sh ''
+                    sh './buildbar.sh'
                      //}
                        // }//end of dir
                      }  //end of step
