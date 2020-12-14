@@ -26,6 +26,7 @@ pipeline {
                          sh "pwd"   
                       // wrap([$class: 'Xvfb'])
                      //{   
+                     sh "chmod 700 buildbar.sh"
                     sh './buildbar.sh'
                      //}
                        // }//end of dir
