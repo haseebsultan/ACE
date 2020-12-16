@@ -12,7 +12,7 @@ git init
 git add .
 git commit -m "Adding file"
 git remote add origin "https://github.com/haseebsultan/ACE.git"
-git push -u origin master
+git push origin master
 git status
 echo "Package Uploaded to GitHub"
 
