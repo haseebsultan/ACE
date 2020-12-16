@@ -10,7 +10,8 @@ cd /opt/ace-11.0.0.9/tools
 cd /$WORKSPACE/GeneratedBarFiles
 git add .
 git commit -m "Adding file"
-git push origin master "https://github.com/haseebsultan/ACE.git"
+git remote add origin "https://github.com/haseebsultan/ACE.git"
+git push -u origin master
 git status
 echo "Package Uploaded to GitHub"
                  
