@@ -11,8 +11,9 @@ cd /$WORKSPACE/GeneratedBarFiles
 
 git add .
 git commit -m "Adding file"
-git remote add origin "https://haseebsultan@github.com/haseebsultan/ACE.git"
-git push --set-upstream origin master
+#git remote add origin "https://haseebsultan@github.com/haseebsultan/ACE.git"
+#git push --set-upstream origin master
+git push origin master
 git status
 echo "Package Uploaded to GitHub"
 
